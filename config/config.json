@@ -1,0 +1,7 @@
+{
+  "development": {
+    "url": "postgres://fgxxvvad:29NwGpx1B8_Rp8wM6GomhfgpMq4YCAwR@hattie.db.elephantsql.com/fgxxvvad",
+    "dialect": "postgres",
+    "operatorsAliases": "0"
+  }
+}
