@@ -6,7 +6,8 @@ module.exports = {
       {
         id: 1,
         name: "Desquiciado",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.08.58_zr1kbw.jpg",
         price: 85,
         description:
           "Blend de Blancas 50% Sauvignon Blanc, 35% Pinot Gris, 15% Chardonnay",
@@ -17,7 +18,8 @@ module.exports = {
       {
         id: 2,
         name: "Casa Petrini",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.09.05_qitumg.jpg",
         price: 75,
         description:
           "100% Chardonnay Tupungato, Mendoza 91 points Robert Parker",
@@ -28,7 +30,8 @@ module.exports = {
       {
         id: 3,
         name: "Pispi",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.09.00_ajbmfy.jpg",
         price: 80,
         description:
           "Malbec 40% Petit Verdot 20% Bonarda 20% Cabernet Franc 10% Merlot 10%",
@@ -39,7 +42,8 @@ module.exports = {
       {
         id: 4,
         name: "Desquiciado Malbec",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.09.08_b6co7h.jpg",
         price: 70,
         description:
           "85% Malbec 8% Pinot Noir 7% Cabernet Franc Valle de Uco, Mendoza",
@@ -50,7 +54,8 @@ module.exports = {
       {
         id: 5,
         name: "Desquiciado",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.09.07_f68hsf.jpg",
         price: 70,
         description: "45% Garnacha 45% Syrah 10% Pinot Gris",
         categoryId: 3,
@@ -60,7 +65,8 @@ module.exports = {
       {
         id: 6,
         name: "Hey Rose",
-        picture: "xxx",
+        picture:
+          "https://res.cloudinary.com/dwr3lgrza/image/upload/v1634113506/WhatsApp_Image_2021-10-10_at_17.09.06_nlromo.jpg",
         price: 70,
         description: "100% Malbec Perfect for a summer afternoon",
         categoryId: 3,

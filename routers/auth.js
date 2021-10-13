@@ -63,6 +63,7 @@ router.post("/signup", async (req, res) => {
 });
 
 router.get("/me", authMiddleware, async (req, res) => {
+  console.log("======== GOT HERE =========");
   delete req.user.dataValues["password"];
   res.status(200).send({ ...req.user.dataValues });
 });
