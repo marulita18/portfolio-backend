@@ -6,6 +6,7 @@ module.exports = {
       {
         date: new Date(),
         status: "done",
+        total: 400,
         createdAt: new Date(),
         updatedAt: new Date(),
       },

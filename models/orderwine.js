@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       orderId: DataTypes.INTEGER,
       wineId: DataTypes.INTEGER,
+      bottleAmount: { type: DataTypes.INTEGER, allowNull: false },
     },
     {
       sequelize,

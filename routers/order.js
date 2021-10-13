@@ -14,9 +14,9 @@ router.post("/", auth, async (req, res, next) => {
       userId,
     });
 
-    const { wines } = req.body;
+    const { data } = req.body;
 
-    wines.map(async (wine) => {
+    data.map(async (wine) => {
       const orderWine = await OrderWine.create({
         wineId: wine.id,
         orderId: newOrder.id,
