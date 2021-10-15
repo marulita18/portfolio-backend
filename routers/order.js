@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const Wines = require("../models").wine;
-const OrderWine = require("../models").orderwine;
+const OrderWine = require("../models").orderWine;
 const Order = require("../models").order;
 const auth = require("../auth/middleware");
 
@@ -15,11 +15,12 @@ router.post("/", auth, async (req, res, next) => {
     });
 
     const { data } = req.body;
-
+    console.log("our data", data);
     data.map(async (wine) => {
       const orderWine = await OrderWine.create({
         wineId: wine.id,
         orderId: newOrder.id,
+        bottleAmount: parseInt(wine.amount),
       });
       return orderWine;
     });
