@@ -22,7 +22,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        name: "Smart ass",
+        name: "Marula",
         email: "a@a.com",
         password: bcrypt.hashSync("a", SALT_ROUNDS),
         isAdmin: true,
