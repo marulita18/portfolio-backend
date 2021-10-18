@@ -14,16 +14,21 @@ router.post("/", auth, async (req, res, next) => {
       userId,
     });
 
-    const { data } = req.body;
-    console.log("our data", data);
-    data.map(async (wine) => {
+    const { cart } = req.body;
+
+    // console.log("our data", data);
+
+    const arrayOfPromises = cart.map(async (item) => {
+      // [{ wineId: 1, amount: 4 }]
       const orderWine = await OrderWine.create({
-        wineId: wine.id,
+        wineId: item.wineId,
         orderId: newOrder.id,
-        bottleAmount: parseInt(wine.amount),
+        bottleAmount: parseInt(item.amount),
       });
       return orderWine;
     });
+
+    await Promise.all(arrayOfPromises);
 
     res.status(201).send(newOrder);
   } catch (e) {
