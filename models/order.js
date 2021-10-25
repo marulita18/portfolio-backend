@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   order.init(
     {
-      status: DataTypes.STRING,
+      status: DataTypes.ENUM("done", "pending", "cancelled"),
       total: DataTypes.INTEGER,
     },
     {

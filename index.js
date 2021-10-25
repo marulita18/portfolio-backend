@@ -7,9 +7,9 @@ const authRouter = require("./routers/auth");
 const orderRouter = require("./routers/order");
 
 const app = express();
-
-app.use(express.json());
 app.use(corsMiddleWare());
+app.use(express.json());
+
 app.use(loggerMiddleWare("dev"));
 
 app.use("/auth", authRouter);

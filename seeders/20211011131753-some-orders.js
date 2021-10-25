@@ -9,6 +9,24 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        status: "pending",
+        total: 80,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        status: "pending",
+        total: 30,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        status: "done",
+        total: 100,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
     /**
      * Add seed commands here.

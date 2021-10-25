@@ -6,6 +6,15 @@ const auth = require("../auth/middleware");
 
 const router = new Router();
 
+router.get("/", async (req, res, next) => {
+  try {
+    const Orders = await Order.findAll();
+    res.send(Orders);
+  } catch (e) {
+    next(e.message);
+  }
+});
+
 router.post("/", auth, async (req, res, next) => {
   try {
     const userId = req.user.id;
@@ -33,6 +42,21 @@ router.post("/", auth, async (req, res, next) => {
     res.status(201).send(newOrder);
   } catch (e) {
     console.log(e.message);
+  }
+});
+
+router.patch("/:id", async (req, res, next) => {
+  try {
+    const id = parseInt(req.params.id);
+    const orderToUpdate = await Order.findByPk(id);
+    if (!orderToUpdate) {
+      res.status(404).send("Order not found");
+    }
+    console.log("req body", req.body.data);
+    const updatedOrder = await orderToUpdate.update({ ...req.body.data });
+    res.status(200).send(updatedOrder);
+  } catch (e) {
+    next(e.message);
   }
 });
 module.exports = router;

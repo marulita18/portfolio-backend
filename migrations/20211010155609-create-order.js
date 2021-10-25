@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       status: {
-        type: Sequelize.STRING,
+        type: Sequelize.ENUM("done", "pending", "cancelled"),
       },
       total: {
         type: Sequelize.INTEGER,
