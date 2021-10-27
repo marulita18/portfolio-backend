@@ -25,10 +25,7 @@ router.post("/", auth, async (req, res, next) => {
 
     const { cart } = req.body;
 
-    // console.log("our data", data);
-
     const arrayOfPromises = cart.map(async (item) => {
-      // [{ wineId: 1, amount: 4 }]
       const orderWine = await OrderWine.create({
         wineId: item.wineId,
         orderId: newOrder.id,

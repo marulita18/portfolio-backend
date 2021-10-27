@@ -19,9 +19,7 @@ async function auth(req, res, next) {
       return res.status(404).send({ message: "User does not exist" });
     }
 
-    // add user object to request
     req.user = user;
-    // next handler
     return next();
   } catch (error) {
     console.log("ERROR IN AUTH MIDDLEWARE", error);
