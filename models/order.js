@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+const orderwine = require("./orderwine");
 module.exports = (sequelize, DataTypes) => {
   class order extends Model {
     /**
@@ -9,13 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       order.belongsTo(models.user);
+      order.belongsToMany(models.wine, {
+        through: "orderWines",
+        foreignKey: "orderId",
+      });
       // define association here
     }
   }
   order.init(
     {
-      date: DataTypes.STRING,
-      status: DataTypes.STRING,
+      status: DataTypes.ENUM("done", "pending", "cancelled"),
+      total: DataTypes.INTEGER,
     },
     {
       sequelize,
