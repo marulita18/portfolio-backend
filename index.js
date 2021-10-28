@@ -1,7 +1,7 @@
 const express = require("express");
 const corsMiddleWare = require("cors");
 const loggerMiddleWare = require("morgan");
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const winesRouter = require("./routers/wines");
 const authRouter = require("./routers/auth");
 const orderRouter = require("./routers/order");
