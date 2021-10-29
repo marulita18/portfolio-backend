@@ -26,7 +26,7 @@
 
  <li> Nodemailer
 
-# Goal for this project
+## Goal for this project
 
  <p> The goal of this project was to build a fullstack app using the technologies learnt at Codaisseur's bootcamp.
 
@@ -49,11 +49,16 @@
  <li> As an admin I want to be able to edit my products
 
 ## Wireframes
-
- <p> You can see the wireframe here:
-
-<a>https://wireframepro.mockflow.com/view/MQNKniibPmb </a>
+   
+ <p> You can see the wireframe <a href="https://wireframepro.mockflow.com/view/MQNKniibPmb"> here</a>.
 
 ## Server-repo
 
  <p> The server side of this project is an Express server connected # to a Sequelize database.
+   
+ ## Repositories
+
+<p>You can see the frontend repo <a href="https://github.com/marulita18/portfolio-frontend"> here. </a>
+
+
+<p> You can see the frontend repo <a href="https://github.com/marulita18/portfolio-backend"> here. </a>
